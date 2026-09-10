@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Westlinks\SimpleIvr\Http\Controllers\IvrSettingController;
+use Westlinks\Wlivr\Http\Controllers\IvrSettingController;
 
 Route::group(['middleware' => ['web', 'auth', 'admin.access']], function(){
     Route::get('/admin/ivr-settings', [IvrSettingController::class, 'index'])->name('ivr_settings.index');

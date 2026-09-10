@@ -1,8 +1,8 @@
 <?php
 
-namespace Westlinks\SimpleIvr;
+namespace Westlinks\Wlivr;
 
-class SimpleIvr
+class Wlivr
 {
     // Build your next great package.
 }

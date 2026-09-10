@@ -1,10 +1,10 @@
-# Simple IVR for WLHM
+# WLIVR - Simple IVR for WLHM
 
 An Interactive Voice Response (IVR) extension package designed for the **WLHM (Westlinks Helpline Manager)** application and adaptable to other Laravel applications requiring dynamic call routing.
 
 ## Overview
 
-`westlinks/simple-ivr` intercepts incoming phone calls and presents callers with an IVR menu. Callers are prompted to press a keypad option, which routes the call to phone numbers defined in the application's database.
+`westlinks/wlivr` intercepts incoming phone calls and presents callers with an IVR menu. Callers are prompted to press a keypad option, which routes the call to phone numbers defined in the application's database.
 
 ### Key Features
 
@@ -33,7 +33,7 @@ Because this package is distributed directly via local path/repository rather th
 Then add the requirement via Composer:
 
 ```bash
-composer require westlinks/simple-ivr
+composer require westlinks/wlivr
 
 ```
 
@@ -44,11 +44,11 @@ composer require westlinks/simple-ivr
 Once installed, publish the package assets, migrations, and configuration (if required by your application setup):
 
 ```bash
-php artisan vendor:publish --provider="Westlinks\SimpleIvr\SimpleIvrServiceProvider"
+php artisan vendor:publish --provider="Westlinks\Wlivr\WlivrServiceProvider"
 
 ```
 
-Configure your telephony service (e.g., Twilio, SignalWire) webhook URL to point to the simple-ivr entry point endpoint defined in your routes.
+Configure your telephony service (e.g., Twilio, SignalWire) webhook URL to point to the wlivr entry point endpoint defined in your routes.
 
 ---
 
@@ -88,5 +88,5 @@ The MIT License (MIT). Please see [LICENSE.md](https://www.google.com/search?q=L
 
 <ElicitationsGroup message="Would you like assistance with any further documentation updates?">
   <Elicitation label="Draft inline code examples for installation" query="Can you help write example code for publishing config files or setting up webhooks for Twilio in this package?"/>
-  <Elicitation label="Update repository path references" query="Does the local repository path in composer.json need to be simple-ivr or public_html depending on deployment?"/>
+  <Elicitation label="Update repository path references" query="Does the local repository path in composer.json need to be wlivr or public_html depending on deployment?"/>
 </ElicitationsGroup>

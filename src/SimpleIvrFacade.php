@@ -1,13 +1,13 @@
 <?php
 
-namespace Westlinks\SimpleIvr;
+namespace Westlinks\Wlivr;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @see \Westlinks\SimpleIvr\Skeleton\SkeletonClass
+ * @see \Westlinks\Wlivr\Skeleton\SkeletonClass
  */
-class SimpleIvrFacade extends Facade
+class WlivrFacade extends Facade
 {
     /**
      * Get the registered name of the component.
@@ -16,6 +16,6 @@ class SimpleIvrFacade extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return 'simple-ivr';
+        return 'wlivr';
     }
 }

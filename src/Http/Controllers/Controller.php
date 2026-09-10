@@ -1,6 +1,6 @@
 <?php
 
-namespace Westlinks\SimpleIvr\Http\Controllers;
+namespace Westlinks\Wlivr\Http\Controllers;
 
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;

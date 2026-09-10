@@ -1,11 +1,11 @@
 {
-    "name": "westlinks/simple-ivr",
-    "description": "Simple IVR package",
+    "name": "westlinks/wlivr",
+    "description": "WLIVR - Simple IVR package",
     "keywords": [
         "westlinks",
-        "simple-ivr"
+        "wlivr"
     ],
-    "homepage": "https://github.com/westlinks/simple-ivr",
+    "homepage": "https://github.com/westlinks/wlivr",
     "license": "MIT",
     "type": "library",
     "authors": [
@@ -25,12 +25,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Westlinks\\SimpleIvr\\": "src"
+            "Westlinks\\Wlivr\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Westlinks\\SimpleIvr\\Tests\\": "tests"
+            "Westlinks\\Wlivr\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -43,10 +43,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Westlinks\\SimpleIvr\\SimpleIvrServiceProvider"
+                "Westlinks\\Wlivr\\WlivrServiceProvider"
             ],
             "aliases": {
-                "SimpleIvr": "Westlinks\\SimpleIvr\\SimpleIvrFacade"
+                "Wlivr": "Westlinks\\Wlivr\\WlivrFacade"
             }
         }
     }

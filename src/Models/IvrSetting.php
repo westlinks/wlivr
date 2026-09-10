@@ -1,6 +1,6 @@
 <?php
 
-namespace Westlinks\SimpleIvr\Models;
+namespace Westlinks\Wlivr\Models;
 
 use Illuminate\Database\Eloquent\Model;
 

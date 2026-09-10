@@ -1,8 +1,8 @@
 <?php
 
-namespace Westlinks\SimpleIvr\Http\Controllers;
+namespace Westlinks\Wlivr\Http\Controllers;
 
-use Westlinks\SimpleIvr\Models\IvrSetting;
+use Westlinks\Wlivr\Models\IvrSetting;
 use Illuminate\Http\Request;
 
 class IvrSettingController extends Controller
@@ -11,7 +11,7 @@ class IvrSettingController extends Controller
     {
         $ivr_settings = IvrSetting::all();
 
-        return view('simple-ivr::ivr_settings.index', compact('ivr_settings'));
+        return view('wlivr::ivr_settings.index', compact('ivr_settings'));
     }
 
     public function store(Request $request)
