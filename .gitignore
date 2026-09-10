@@ -1,2 +1,12 @@
-backups-nongit/
-vendor/
+/vendor/
+
+.env
+.env.backup
+.env.production
+
+.DS_Store
+.idea/
+.vscode/
+
+.phpunit.result.cache
+composer.phar
