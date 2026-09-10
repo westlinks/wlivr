@@ -1,58 +1,92 @@
-# Very short description of the package
+# Simple IVR for WLHM
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/westlinks/simple-ivr.svg?style=flat-square)](https://packagist.org/packages/westlinks/simple-ivr)
-[![Total Downloads](https://img.shields.io/packagist/dt/westlinks/simple-ivr.svg?style=flat-square)](https://packagist.org/packages/westlinks/simple-ivr)
-![GitHub Actions](https://github.com/westlinks/simple-ivr/actions/workflows/main.yml/badge.svg)
+An Interactive Voice Response (IVR) extension package designed for the **WLHM (Westlinks Helpline Manager)** application and adaptable to other Laravel applications requiring dynamic call routing.
 
-Special purpose package for use in product code name WLHM. 
+## Overview
+
+`westlinks/simple-ivr` intercepts incoming phone calls and presents callers with an IVR menu. Callers are prompted to press a keypad option, which routes the call to phone numbers defined in the application's database.
+
+### Key Features
+
+* **Interactive Voice Menu:** Plays custom audio prompts and captures DTMF keypad inputs.
+* **Database-Driven Routing:** Maps menu selections to active schedules and call routes stored in your database.
+* **Shift Fallback:** If no selection is made after a configurable timeout, the call automatically rolls to the first available on-shift staff member.
+* **Voicemail Failover:** Automatically transfers calls to voicemail if no staff member answers.
+* **Use Case:** Primarily built for nonprofit 12-step helplines, but extensible to any organization that needs to forward inbound calls to live personnel based on real-time shift schedules.
+
+---
 
 ## Installation
 
-You can install the package via composer:
+Because this package is distributed directly via local path/repository rather than Packagist, register it locally in your main application's `composer.json`:
+
+```json
+"repositories": [
+    {
+        "type": "path",
+        "url": "public_html"
+    }
+]
+
+```
+
+Then add the requirement via Composer:
 
 ```bash
 composer require westlinks/simple-ivr
+
 ```
+
+---
 
 ## Usage
-This is a special use sub-package used to add an IVR tree to the Helpline Manager web app. It is not registered at Packagist and must be installed semi-manually. Currently Helpline Manager is a private repo. 
-```php
-//Add to composer.json just prior to the require{} section.
-    "repositories": [
-        {
-            "type": "path",
-            "url": "local/simple-ivr"
-        }
-        ],
+
+Once installed, publish the package assets, migrations, and configuration (if required by your application setup):
+
+```bash
+php artisan vendor:publish --provider="Westlinks\SimpleIvr\SimpleIvrServiceProvider"
+
 ```
 
-### Testing
+Configure your telephony service (e.g., Twilio, SignalWire) webhook URL to point to the simple-ivr entry point endpoint defined in your routes.
+
+---
+
+## Testing
+
+Run the test suite using Composer:
 
 ```bash
 composer test
+
 ```
 
-### Changelog
-
-Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
+---
 
 ## Contributing
 
-Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
+Please see [CONTRIBUTING](https://www.google.com/search?q=CONTRIBUTING.md) for details.
 
 ### Security
 
-If you discover any security related issues, please use the issue tracker.
+If you discover any security-related issues, please use the repository issue tracker.
+
+---
 
 ## Credits
 
--   [Westlinks Online](https://github.com/westlinks)
--   [All Contributors](../../contributors)
+* [Westlinks Online](https://github.com/westlinks)
+* [All Contributors](https://www.google.com/search?q=../../contributors)
+
+---
 
 ## License
 
-The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
+The MIT License (MIT). Please see [LICENSE.md](https://www.google.com/search?q=LICENSE.md) for more information.
 
-## Laravel Package Boilerplate
+```
 
-This package was generated using the [Laravel Package Boilerplate](https://laravelpackageboilerplate.com).
+<ElicitationsGroup message="Would you like assistance with any further documentation updates?">
+  <Elicitation label="Draft inline code examples for installation" query="Can you help write example code for publishing config files or setting up webhooks for Twilio in this package?"/>
+  <Elicitation label="Update repository path references" query="Does the local repository path in composer.json need to be simple-ivr or public_html depending on deployment?"/>
+</ElicitationsGroup>
